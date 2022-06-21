@@ -1,4 +1,3 @@
-// import Link from "next/link"
 import Image from "next/image"
 import styles from '../../styles/Burgers.module.css'
 
@@ -9,7 +8,6 @@ const Burgers = ({ burgers }) => {
             <h1>Наши бургеры</h1>
             {
                 burgers?.map(burger => (
-                    // <Link href={`/burgers/${burger.id}`} key={burger.id}>
                     <div className={styles.burgerCard} key={burger.id}>
                         <div className={styles.imageContainer}>
                             <Image src={`${burger.image}`} alt={`${burger.name}`} width="100%" height="100%"
@@ -20,7 +18,6 @@ const Burgers = ({ burgers }) => {
                             <p>{burger.desc}</p>
                         </div>
                     </div>
-                    // </Link>
                 ))
             }
         </div>
