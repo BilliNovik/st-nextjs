@@ -10,7 +10,7 @@ const Burgers = ({ burgers }) => {
             {
                 burgers?.map(burger => (
                     // <Link href={`/burgers/${burger.id}`} key={burger.id}>
-                    <div className={styles.burgerCard}>
+                    <div className={styles.burgerCard} key={burger.id}>
                         <div className={styles.imageContainer}>
                             <Image src={`${burger.image}`} alt={`${burger.name}`} width="100%" height="100%"
                                 layout="responsive" objectFit="cover" />
@@ -29,7 +29,7 @@ const Burgers = ({ burgers }) => {
 
 export const getStaticProps = async () => {
     try {
-        const res = await fetch('http://localhost:30020/api/burgers')
+        const res = await fetch('http://localhost:3000/api/burgers')
         const data = await res.json()
 
         if (!data) {
