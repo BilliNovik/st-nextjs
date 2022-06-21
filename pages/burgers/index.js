@@ -26,7 +26,7 @@ const Burgers = ({ burgers }) => {
 
 export const getStaticProps = async () => {
     try {
-        const res = await fetch('http://localhost:3000/api/burgers')
+        const res = await fetch(process.env.API_HOST)
         const data = await res.json()
 
         if (!data) {
