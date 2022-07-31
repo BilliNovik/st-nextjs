@@ -26,7 +26,7 @@ const Burgers = ({ burgers }) => {
 
 export const getStaticProps = async () => {
     try {
-        const res = await fetch('https://62d937e65d893b27b2e0cf08.mockapi.io/lucci-pizza')
+        const res = await fetch('https://62d937e65d893b27b2e0cf08.mockapi.io/lucci-pizza/burgers-for-other-project')
         const data = await res.json()
 
         if (!data) {
